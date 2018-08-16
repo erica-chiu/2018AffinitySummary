@@ -1,7 +1,7 @@
 ## 2018AffinitySummary
 
 # Pinning Model 
-##### *feat_flex/ligand_web*
+###### Can be found in *feat_flex/ligand_web*
 
 
 **Goal**: Given ligand coordinates and a set of possible coordinates for each atom, select coordinates for each atom that preserves the shape of the coordinates
@@ -19,10 +19,12 @@ Top statistics:
 
 
 # Higher Definition Model
-#### *high_def/metrics_tm*
-Goal: Give protein and ligand atoms and coordinates, predicts grid location that corresponds to the crystal ligand location for each atom
+###### Can be found in *high_def/metrics_tm*
 
-General description: Creates a large grid over the binding site, runs a 3d convolution over the ligand and another 3d convolution over the grid space, performs an outer product, 
+
+**Goal**: Give protein and ligand atoms and coordinates, predicts grid location that corresponds to the crystal ligand location for each atom
+
+**General description**: Creates a large grid over the binding site, runs a 3d convolution over the ligand and another 3d convolution over the grid space, performs an outer product, 
 
 Variations: 
 
