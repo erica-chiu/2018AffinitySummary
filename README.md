@@ -1,7 +1,7 @@
 ## 2018AffinitySummary
 
 # Pinning Model 
-#### *feat_flex/ligand_web*
+##### *feat_flex/ligand_web*
 
 
 **Goal**: Given ligand coordinates and a set of possible coordinates for each atom, select coordinates for each atom that preserves the shape of the coordinates
