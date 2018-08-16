@@ -1,7 +1,7 @@
 ## 2018AffinitySummary
 
 # Pinning Model 
-###### feat_flex/ligand_web
+#### *feat_flex/ligand_web*
 Goal: Given ligand coordinates and a set of possible coordinates for each atom, select coordinates for each atom that preserves the shape of the coordinates
 
 General description: Runs a 3d convolution in the ligand space and then takes those features and runs a 3d convolution in the possible coordinate space. Can repeat by taking those features and running another 3d convolution in the ligand space and do more convolutions in a similar fashion.
