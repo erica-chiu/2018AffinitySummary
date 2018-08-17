@@ -27,9 +27,9 @@
 
 
 | Model | SeqTest Accuracy | SeqTest RMSD |
-| ----- | -------- | --- | --- |
+| ----- | -------- | --- |
 | Feed-forward, 5 convolutions, crystal transformed, 2 poses, gradient descent | 0.8000001 | 0.70817494 |
-| Feed-forward, 5 convolutions, conformer, 2 poses, adam optimizer | 
+| Feed-forward, 5 convolutions, conformer, 2 poses, adam optimizer | | |
 
 ## Higher Definition Model
 ###### Can be found in high_def/metrics_tm
