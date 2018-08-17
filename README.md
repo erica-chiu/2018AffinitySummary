@@ -23,6 +23,8 @@
 10. Use top 2 or 10 beads from bead model as pins
 
 **_Top statistics_**:
+
+
 | Model | SeqTest Accuracy | SeqTest AUC | SeqTest RMSD |
 | ----- | -------- | --- | --- |
 | Feed-forward, 5 convolutions, crystal transformed, 2 poses, gradient descent | 0.8000001 |  | 0.70817494 |
