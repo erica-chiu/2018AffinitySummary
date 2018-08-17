@@ -84,6 +84,8 @@ More statistics can be found [here](PreliminaryTest.md).
 5. Cross entropy loss or swap loss
 
 **_Top statistics_**:
+
+
 | Model | SeqTest Accuracy | SeqTest RMSD | SeqTest AUC |
 |---|---|---|---|
 | Basic bi_conv on 2.4A grids | 0.8329366 | 7.4538136 | 0.9742352 |
@@ -103,6 +105,8 @@ More statistics can be found [here](PreliminaryTest.md).
 2. Model35 (euclidean distance) or Model38 (cosine distance)
 
 **_Statistics_**:
+
+
 | Model | GoodBeadAcc | SeqBeadAcc | GoodBindAcc | SeqBindAcc |
 |---|---|---|---|---|
 | 1 Euclidean | 0.9789973 | 0.9841414 | 0.973965 | 0.9860906 |
