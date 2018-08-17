@@ -17,10 +17,15 @@
 4. Matching a transformed version of crystal ligand or conformer, 
 5. Choosing from 2 poses to 10 poses
 6. Using weighted sums instead of concatenations (for 
-7. Using batches of sizes 1,10,100
+7. Using batches of sizes 1, 10, 30, 100
+8. Random pins or random grids
+9. Use grey map pins
+10. Use top 2 or 10 beads from bead model as pins
 
 **_Top statistics_**:
-
+| Model | SeqTest Accuracy | SeqTest AUC | SeqTest RMSD |
+| ----- | -------- | --- | --- |
+| Feed-forward, 5 convolutions, crystal transformed, 2 poses, gradient descent | 0.8000001 | ~~ ~~ | 0.70817494 |
 
 ## Higher Definition Model
 ###### Can be found in high_def/metrics_tm
@@ -37,6 +42,7 @@
 2. Ranging the space from -25A to +25A or -12A to +12A
 3. Using cross entropy loss or noise-contrastive estimation loss
 4. Compared with just 20 divisions (equivalent to 2 iterations)
+5. Combine with previous pinning model
 
 **_Top statistics_**:
 
@@ -44,11 +50,33 @@
 ## Bi-convolution
 ###### Can be found in high_def/bi_conv
 
-**_Goal_**: 
+
+**_Goal_**: Given relative ligand coordinates, pin coordinates, and pin features, learn features from two different spaces 
+
+**_Benefits_**: The features are invariant to ordering of the coordinates representing each of the spaces
+
+**_General description_**: Performs a 3D convolution over the space of the original ligand atoms with pin features and then performs a second convolution with the new features over the space of the pins coordinates
+
+**_Variations_**
+1. Random grids (2.4A, 1.2A, .6A) for pins
+2. Random coordinates for pins
+3. Grey map for pins
+
+**_Top statistics_**:
+
 
 
 ## Fixing beads
+###### Can be found in high_def/fix_bead
+
+**_Goal_**: Beads and ligand vector representations should be invariant to switching beads
+
+**_Variations_**:
+1. 1-3 convolutions
+2. Model35 (euclidean distance) or Model38 (cosine distance)
+
+**_Top statistics_**:
 
 
-## Miscellaneous
+
 
