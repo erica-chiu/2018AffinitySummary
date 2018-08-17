@@ -51,7 +51,7 @@
 **_Statistics_**:
 
 | Model | SeqTest AUC |
-| ----- | -------- | --- | --- |
+| ----- | -------- |
 | 1 layer cross entropy | 0.7612224 |
 | 2 layer cross entropy | 0.7345741, 0.49980348 | 
 | 3 layer cross entropy | 0.79310304, 0.5035895, 0.500349 |
