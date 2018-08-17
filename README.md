@@ -26,10 +26,12 @@
 **_Top statistics_**:
 
 
-| Model | SeqTest Accuracy | SeqTest RMSD |
-| ----- | -------- | --- |
-| Feed-forward, 5 convolutions, crystal transformed, 2 poses, gradient descent | 0.8000001 | 0.70817494 |
-| Feed-forward, 5 convolutions, conformer, 2 poses, adam optimizer | | |
+| Model | SeqTest Accuracy | SeqTest RMSD | SeqTest AUC |
+| ----- | -------- | --- | --- |
+| Feed-forward, 5 convolutions, crystal transformed, 2 poses, gradient descent | 0.8000001 | 0.70817494 | ~~ |
+| Feed-forward, 2 convolutions, conformer, 2 poses, gradient descent, 2.4A grids | 0.9751578 | 2.1780472 | 0.9963048 |
+| Feed-forward, 2 convolutions, conformer, 10 poses, gradient descent, 2.4A grids | 0.84553695 | 6.642 | 0.9758124 |
+| Feed-forward, 2 convolutions, conformer, 2 poses, gradient descent, 0.6A grids | 0.98905164 | 0.69357973 | 0.9986486 |
 
 More statistics can be found [here](PreliminaryTest.md).
 
@@ -78,10 +80,18 @@ More statistics can be found [here](PreliminaryTest.md).
 1. Random grids (2.4A, 1.2A, .6A) for pins
 2. Random coordinates for pins
 3. Grey map for pins
+4. 2 different concatenations of ligand features
+5. Cross entropy loss or swap loss
 
 **_Top statistics_**:
-|
-
+| Model | SeqTest Accuracy | SeqTest RMSD | SeqTest AUC |
+|---|---|---|---|
+| Basic bi_conv on 2.4A grids | 0.8329366 | 7.4538136 | 0.9742352 |
+| Initial ligand concatenation on 2.4A grids | 0.8538086 | 6.0495987 | 0.97240996 |
+| No grids with 2nd ligand concatenation | 0.46637124 | 13.798717 | 0.8164979 |
+| 0.6A grids | 0.9107372 | 5.179973 | 0.985856 |
+| No grids 2 sets of bi_conv | 0.9323402 | 3.0136988 | 0.9805218 |
+| Grey map swap | 0.35714287 | 3.4412975 | 3.4412975 |
 
 ## Fixing beads
 ###### Can be found in high_def/fix_bead
@@ -92,8 +102,16 @@ More statistics can be found [here](PreliminaryTest.md).
 1. 1-3 convolutions
 2. Model35 (euclidean distance) or Model38 (cosine distance)
 
-**_Top statistics_**:
+**_Statistics_**:
+| Model | GoodBeadAcc | SeqBeadAcc | GoodBindAcc | SeqBindAcc |
+|---|---|---|---|---|
+| 1 Euclidean | 0.9789973 | 0.9841414 | 0.973965 | 0.9860906 |
+| 2 Euclidean | 0.98313314 | 0.9812303 | 0.98346484 | 0.9756007 |
+| 3 Euclidean | 0.9790819 | 0.98118925 | 0.98620284 | 0.95882887 |
 
+
+
+For full statistics, click [here](http://saveresults.s3-website-us-east-1.amazonaws.com/model_sessions/ligand_tm) and [here](http://saveresults.s3-website-us-east-1.amazonaws.com/model_sessions/high_def).
 
 
 
