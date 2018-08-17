@@ -21,13 +21,15 @@
 8. Random pins or random grids
 9. Use grey map pins
 10. Use top 2 or 10 beads from bead model as pins
+11. Did preliminary tests with just triangles, squares and icosahedrons
 
 **_Top statistics_**:
 
 
-| Model | SeqTest Accuracy | SeqTest AUC | SeqTest RMSD |
+| Model | SeqTest Accuracy | SeqTest RMSD |
 | ----- | -------- | --- | --- |
-| Feed-forward, 5 convolutions, crystal transformed, 2 poses, gradient descent | 0.8000001 | ~~ ~~ | 0.70817494 |
+| Feed-forward, 5 convolutions, crystal transformed, 2 poses, gradient descent | 0.8000001 | 0.70817494 |
+| Feed-forward, 5 convolutions, conformer, 2 poses, adam optimizer | 
 
 ## Higher Definition Model
 ###### Can be found in high_def/metrics_tm
@@ -46,7 +48,18 @@
 4. Compared with just 20 divisions (equivalent to 2 iterations)
 5. Combine with previous pinning model
 
-**_Top statistics_**:
+**_Statistics_**:
+
+| Model | SeqTest AUC |
+| ----- | -------- | --- | --- |
+| 1 layer cross entropy | 0.7612224 |
+| 2 layer cross entropy | 0.7345741, 0.49980348 | 
+| 3 layer cross entropy | 0.79310304, 0.5035895, 0.500349 |
+| 1 layer nce | 0.80953294 |
+| 2 layer nce | 0.80062085, 0.57625467 | 
+| 3 layer nce | 0.8110932, 0.5955195, 0.5003045 | 
+| 20 divisions | 0.65434194 |
+
 
 
 ## Bi-convolution
@@ -78,6 +91,7 @@
 2. Model35 (euclidean distance) or Model38 (cosine distance)
 
 **_Top statistics_**:
+
 
 
 
