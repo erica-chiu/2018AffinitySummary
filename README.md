@@ -31,7 +31,7 @@
 | Feed-forward, 5 convolutions, crystal transformed, 2 poses, gradient descent | 0.8000001 | 0.70817494 |
 | Feed-forward, 5 convolutions, conformer, 2 poses, adam optimizer | | |
 
-More statistics can be found [here](PreliminaryResults.md)
+More statistics can be found [here](PreliminaryTest.md).
 
 ## Higher Definition Model
 ###### Can be found in high_def/metrics_tm
